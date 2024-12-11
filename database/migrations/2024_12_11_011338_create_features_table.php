@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('thumbLocation')->nullable();
             $table->foreignId('section_id')->constrained();
             $table->enum('medium',['image','video','html']);
-            $table->string('html')->nullable();
+            $table->text('html')->nullable();
             $table->string('mediaLocation')->nullable();
             $table->boolean('isPopular')->default(false);
             $table->timestamps();
