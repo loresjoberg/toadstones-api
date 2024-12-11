@@ -60,7 +60,8 @@ class FeatureSeeder extends Seeder
                 'medium' => 'html',
                 'mediaLocation' => 'first-gen-pokemon.png',
                 'thumbLocation' => 'first-gen-pokemon-thumb.png',
-                'html' => `<div>
+                'html' => <<<HTML
+<div>
                <h2>The Ratings | First-Generation Pokémon</h2>
                <h3>Tangela</h3>
                <div>If Pokémon were US Presidents, Tangela would be Rutherford B. Hayes. If Pokémon were members of The
@@ -90,7 +91,8 @@ and some, like Geodude, aren’t like real organisms but you could see how they 
 are those that, like Porygon, are manufactured. If I brought a Furby to the Pokémon world, would that Furby be
 considered a Pokémon, or would I have to give it some Pokémon-specific abilities, such as sending children into
 epileptic fits and nearly killing an entire anime series? C-</div>
-<div>`,
+<div>
+HTML,
                 'isPopular' => false,
             ], [
                 'title' => 'You\'ve Been Hit',
@@ -178,7 +180,7 @@ epileptic fits and nearly killing an entire anime series? C-</div>
                 'medium' => 'html',
                 'mediaLocation' => 'monopoly-tokens.png',
                 'thumbLocation' => 'monopoly-tokens-thumb.png',
-                'html' => `
+                'html' => <<<HTML
 <div>
 <h2>The Ratings: Monopoly Tokens</h2>
 
@@ -197,7 +199,7 @@ the “Beauty Contest” card, you have to take your laughs where you can get th
 <h3>The One Everyone Forgets</h3>
 <div>What was it? I keep thinking “candlestick,” but that’s Clue. Martini glass? Wad of bills? Bishop? I’m pretty sure I’ve seen a silver battleship, but either that’s just that expanded edition they were hawking a while ago, or I’m getting mental board game cross-pollination again. Well, it couldn’t have been all that great, so I’ll give it the generic stamp of mild disapproval. C-</div>
 </div>
-`,
+HTML,
                 'isPopular' => true,
             ],
         ]);
