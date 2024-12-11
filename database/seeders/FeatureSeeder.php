@@ -60,9 +60,7 @@ class FeatureSeeder extends Seeder
                 'medium' => 'html',
                 'mediaLocation' => 'first-gen-pokemon.png',
                 'thumbLocation' => 'first-gen-pokemon-thumb.png',
-                'html' => <<<HTML
-<div></div>
-HTML,
+                'html' => '<div>First Gen Pokémon</div>',
                 'isPopular' => false,
             ], [
                 'title' => 'You\'ve Been Hit',
@@ -150,10 +148,7 @@ HTML,
                 'medium' => 'html',
                 'mediaLocation' => 'monopoly-tokens.png',
                 'thumbLocation' => 'monopoly-tokens-thumb.png',
-                'html' => <<<HTML
-<div>
-</div>
-HTML,
+                'html' => '<div>Monopoly Tokens</div>',
                 'isPopular' => true,
             ],
         ]);
