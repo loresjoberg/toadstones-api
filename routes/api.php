@@ -13,14 +13,14 @@ Route::get('/user', function (Request $request) {
     }
 })->middleware('auth:sanctum');;
 
-Route::get('/section', [SectionController::class, 'index']);
-Route::get('/section/{id}', [SectionController::class, 'show']);
-Route::post('/section', [SectionController::class, 'store']);
-Route::put('/section/{id}', [SectionController::class, 'update']);
-Route::delete('/section/{id}', [SectionController::class, 'destroy']);
+Route::get('/sections', [SectionController::class, 'index']);
+Route::get('/sections/{id}', [SectionController::class, 'show']);
+Route::post('/sections', [SectionController::class, 'store']);
+Route::put('/sections/{id}', [SectionController::class, 'update']);
+Route::delete('/sections/{id}', [SectionController::class, 'destroy']);
 
-Route::get('/feature', [FeatureController::class, 'index']);
-Route::get('/feature/{id}', [FeatureController::class, 'show']);
-Route::post('/feature', [FeatureController::class, 'store']);
-Route::put('/feature/{id}', [FeatureController::class, 'update']);
-Route::delete('/feature/{id}', [FeatureController::class, 'destroy']);
+Route::get('/features', [FeatureController::class, 'index']);
+Route::get('/features/{id}', [FeatureController::class, 'show']);
+Route::post('/features', [FeatureController::class, 'store']);
+Route::put('/features/{id}', [FeatureController::class, 'update']);
+Route::delete('/features/{id}', [FeatureController::class, 'destroy']);
