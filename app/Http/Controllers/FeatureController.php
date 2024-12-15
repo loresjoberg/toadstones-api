@@ -21,7 +21,7 @@ class FeatureController extends Controller
         $feature->title = $request->title;
         $feature->slug = $request->slug;
         $feature->launch = $request->launch;
-        $feature->status = $request->launch;
+        $feature->status = $request->status;
         $feature->section_id = $request->section_id;
         $feature->medium = $request->medium;
         $feature->html = $request->html;
