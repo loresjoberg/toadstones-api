@@ -25,7 +25,15 @@ class FeatureController extends Controller
         $feature->section_id = $request->section_id;
         $feature->medium = $request->medium;
         $feature->html = $request->html;
-        $feature->mediaLocation = $request->mediaLocation;
+        if ($request->medium === 'video') {
+            $path = $request->file('video')->storeAs('video', $request->slug . ".mp4",'public');
+            $feature->mediaLocation = $path;
+        } elseif ($request->medium === 'image') {
+            $path = $request->file('image')->storeAs('images', $request->slug . ".mp4",'public');
+            $feature->mediaLocation = $path;
+        }
+        $path = $request->file('thumbnail')->storeAs('thumbnails', $request->slug . "-thumb.png",'public');
+        $feature->thumbnail = $path;
         $feature->save();
         return response()->json(['message' => 'Feature Saved'], 201);
     }
