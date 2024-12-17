@@ -34,7 +34,7 @@ class FeatureController extends Controller
             $feature->mediaLocation = $path;
         }
         $thumbPath = $request->file('thumbnail')->storeAs('thumbnails', $request->slug . "-thumb.png",'public');
-        $feature->thumbnail = $thumbPath;
+        $feature->thumbLocation = $thumbPath;
         $feature->save();
         return response()->json(['message' => 'Feature Saved at ' . $path . ' and ' . $thumbPath], 201);
     }
