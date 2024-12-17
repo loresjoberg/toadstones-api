@@ -30,7 +30,7 @@ class FeatureController extends Controller
             $path = $request->file('video')->storeAs('video', $request->slug . ".mp4",'public');
             $feature->mediaLocation = $path;
         } elseif ($request->medium === 'image') {
-            $path = $request->file('image')->storeAs('images', $request->slug . ".mp4",'public');
+            $path = $request->file('image')->storeAs('images', $request->slug . ".png",'public');
             $feature->mediaLocation = $path;
         }
         $thumbPath = $request->file('thumbnail')->storeAs('thumbnails', $request->slug . "-thumb.png",'public');
