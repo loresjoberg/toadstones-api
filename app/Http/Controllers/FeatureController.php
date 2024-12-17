@@ -25,6 +25,7 @@ class FeatureController extends Controller
         $feature->section_id = $request->section_id;
         $feature->medium = $request->medium;
         $feature->html = $request->html;
+        $path = 'nowhere';
         if ($request->medium === 'video') {
             $path = $request->file('video')->storeAs('video', $request->slug . ".mp4",'public');
             $feature->mediaLocation = $path;
@@ -32,10 +33,10 @@ class FeatureController extends Controller
             $path = $request->file('image')->storeAs('images', $request->slug . ".mp4",'public');
             $feature->mediaLocation = $path;
         }
-        $path = $request->file('thumbnail')->storeAs('thumbnails', $request->slug . "-thumb.png",'public');
-        $feature->thumbnail = $path;
+        $thumbPath = $request->file('thumbnail')->storeAs('thumbnails', $request->slug . "-thumb.png",'public');
+        $feature->thumbnail = $thumbPath;
         $feature->save();
-        return response()->json(['message' => 'Feature Saved'], 201);
+        return response()->json(['message' => 'Feature Saved at ' . $path . ' and ' . $thumbPath], 201);
     }
 
     public function show(int $id): JsonResponse
